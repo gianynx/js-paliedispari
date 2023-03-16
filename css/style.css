@@ -1,3 +1,29 @@
+/*****************************************************
+CSS GENERAL
+*****************************************************/
+
+body {
+    background-image: linear-gradient(to left, #A60F0F, #8C8523, #2B400B, #162612, #471D59);
+    font-family: 'Inconsolata', monospace;
+}
+
+.wrapper {
+    width: 100%;
+    height: 80vh;
+}
+
+#box {
+    margin-top: 9rem;
+}
+
+.text {
+    color: white;
+}
+
+/*****************************************************
+CSS "Palindroma"
+*****************************************************/
+
 #btn_box {
     margin-top: 2rem;
     margin-left: 42rem;
@@ -5,4 +31,13 @@
 
 #ticket {
     margin-top: 8rem;
+}
+
+/*****************************************************
+CSS "Pari & Dispari"
+*****************************************************/
+
+.margin {
+    margin-left: 42rem;
+    margin-top: 2rem;
 }
