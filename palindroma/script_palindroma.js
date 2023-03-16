@@ -13,10 +13,13 @@ clickBtn.addEventListener('click', palindroma);
 function palindroma() {
     let wordValue = wordInput.value.toLowerCase();
     let word = wordValue.split("").reverse().join("");
+    let message = 'The word is a palindrome!';
+    let message_2 = "The word isn't a palindrome!";
     if (wordValue === word) {
-        ticket.innerHTML = `<h1>The word is a palindrome!</h1>`;
+        ticket.innerHTML = `${message}`;
         ticket.classList.remove ("d-none");
     } else {
+        ticket.innerHTML = `${message_2}`;
         ticket.classList.remove("d-none");
     }
 }
