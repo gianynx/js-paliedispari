@@ -11,16 +11,19 @@ const ticket = document.getElementById('ticket');
 
 clickBtn.addEventListener('click', palindroma);
 function palindroma() {
-    let wordValue = wordInput.value;
+    let wordValue = wordInput.value.toLowerCase();
     let word = wordValue.split(" ").reverse().join(" ");
     if (wordValue === word) {
         ticket.innerHTML = `<h1>The word is a palindrome!</h1>`;
         ticket.classList.remove ("d-none");
+    } else {
+        ticket.innerHTML = `<h1>The word isn't a palindrome!</h1>`;
+        ticket.classList.remove("d-none");
+    }
 }
 
-cancelBtn.addEventListener('click', palindroma);
-function palindroma() {
-    wordValue = '';
-    word = '';
+cancelBtn.addEventListener('click', reset);
+function reset() {
+    wordInput.value = '';
     ticket.classList.toggle ("d-none");
 }
