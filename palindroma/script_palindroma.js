@@ -14,10 +14,10 @@ function palindroma() {
         return;
     }
     let word = wordValue.split("").reverse().join("");
-    let message = 'The word is a palindrome!';
+    let message_1 = 'The word is a palindrome!';
     let message_2 = "The word isn't a palindrome!";
     if (wordValue === word) {
-        ticket.innerHTML = `${message}`;
+        ticket.innerHTML = `${message_1}`;
         ticket.classList.remove ("d-none");
     } else {
         ticket.innerHTML = `${message_2}`;
