@@ -16,9 +16,9 @@ function randomGame() {
     let userNum = parseInt(evenOrOdd.value);
     let computerNum = getRndInteger(1, 5);
     let sum = userNum + computerNum;
-    let message_1 = 'Computer:';
+    let message_1 = 'Computer number:';
     computerTicket.innerHTML = `${message_1} ${computerNum}`;
-    let message_2 = 'Sum:';
+    let message_2 = 'Sum (Your number + Computer number):';
     sumTicket.innerHTML = `${message_2} ${sum}`;
     if ((sum % 2 === 0) && (userNum % 2 === 0)) {
         let message_3 = 'You win!';
