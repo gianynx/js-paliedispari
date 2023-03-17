@@ -9,30 +9,22 @@ const evenOrOdd = document.getElementById('evenOrOdd');
 const clickBtn = document.querySelector('button');
 const computerTicket = document.getElementById('computerTicket');
 const sumTicket = document.getElementById('sumTicket');
+const ticket = document.getElementById('ticket');
 
-clickBtn.addEventListener('click', getRndInteger);
-function getRndInteger(min, max) {
-    let userNum = evenOrOdd.value;
-    userNum = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+clickBtn.addEventListener('click', randomGame);
+function randomGame() {
+    let userNum = parseInt(evenOrOdd.value);
     let computerNum = getRndInteger(1, 5);
+    let sum = userNum + computerNum;
     let message_1 = 'Computer:';
     computerTicket.innerHTML = `${message_1} ${computerNum}`;
-    let sum = userNum + computerNum;
     let message_2 = 'Sum:';
     sumTicket.innerHTML = `${message_2} ${sum}`;
-    function evenNum() {
-        if (sum % 2 === 0) {
-            return true;
-        }
-        return false;
-    }
-    let even = evenNum(sum);
-    if ((userNum === even) && (sum === even) || (userNum !== even) && (sum !== even)) {
-        const ticket = document.getElementById('ticket');
-        let message_1 = 'You win!';
-        ticket.innerHTML = `${message_1}`;
-    } else if ((computerNum === even) && (sum === even) || (computerNum !== even) && (sum !== even)) {
-        let message_2 = 'You lost!';
-        ticket.innerHTML = `${message_2}`;
+    if ((sum % 2 === 0) && (userNum % 2 === 0)) {
+        let message_3 = 'You win!';
+        ticket.innerHTML = `${message_3}`;
+    } else {
+        let message_4 = 'You lost!';
+        ticket.innerHTML = `${message_4}`;
     }
 }
