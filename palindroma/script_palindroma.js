@@ -12,6 +12,9 @@ const ticket = document.getElementById('ticket');
 clickBtn.addEventListener('click', palindroma);
 function palindroma() {
     let wordValue = wordInput.value.toLowerCase();
+    if (wordValue === '') {
+        return; // Exit the function if the input is empty
+    }
     let word = wordValue.split("").reverse().join("");
     let message = 'The word is a palindrome!';
     let message_2 = "The word isn't a palindrome!";
@@ -27,5 +30,5 @@ function palindroma() {
 cancelBtn.addEventListener('click', reset);
 function reset() {
     wordInput.value = '';
-    ticket.classList.toggle ("d-none");
+    ticket.classList.add ("d-none");
 }
