@@ -7,8 +7,8 @@ const clickBtn = document.getElementById('btn_palindroma_1');
 const cancelBtn = document.getElementById('btn_palindroma_2');
 const ticket = document.getElementById('ticket');
 
-clickBtn.addEventListener('click', palindroma);
-function palindroma() {
+clickBtn.addEventListener('click', palindrome);
+function palindrome() {
     let wordValue = wordInput.value.toLowerCase();
     if (wordValue === '') {
         return;
